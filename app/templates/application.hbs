@@ -3,14 +3,17 @@
   <aside>
     <ul class="nav nav-pills">
       <li>
-        {{link-to 'Companies' 'companies'}}
+        {{#linkTo "companies" tagName="li" href=false}}<a {{bindAttr href="view.href"}}>Dashboard</a>{{/linkTo}}
       </li>
       <li>
-        {{link-to 'People' 'people'}}
+        {{#linkTo "people" tagName="li" href=false}}<a {{bindAttr href="view.href"}}>People</a>{{/linkTo}}
       </li>
-      <li>{{link-to 'Tasks' 'tasks'}}</li>
+      <li>
+        {{#linkTo "tasks" tagName="li" href=false}}<a {{bindAttr href="view.href"}}>Tasks</a>{{/linkTo}}
+      </li>
     </ul>
   </aside>
-
-  {{outlet}}
+  <section class="main">
+    {{outlet}}
+  </section>
 </div>
