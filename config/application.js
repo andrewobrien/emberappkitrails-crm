@@ -6,7 +6,7 @@
 //= require router
 //= require_tree ../app
 //= require_tree ./initializers
-//= require bootstrap
-//= require select2
+
+
 
 window.App = require('app').default.create();

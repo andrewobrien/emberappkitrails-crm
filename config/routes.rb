@@ -1,4 +1,14 @@
 EmberappkitrailsCrm::Application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :companies, except: [:new, :edit]
+      resources :tasks, except: [:new, :edit]
+      resources :people, except: [:new, :edit]
+      resources :companies, except: [:new, :edit]
+    end
+  end
+
+  match "/*path" => "landing#index", via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

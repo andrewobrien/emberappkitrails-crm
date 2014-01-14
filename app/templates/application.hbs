@@ -1,3 +1,16 @@
 <div class="container">
   <h2>Ember CRM</h2>
+  <aside>
+    <ul class="nav nav-pills">
+      <li>
+        {{link-to 'Companies' 'companies'}}
+      </li>
+      <li>
+        {{link-to 'People' 'people'}}
+      </li>
+      <li>{{link-to 'Tasks' 'tasks'}}</li>
+    </ul>
+  </aside>
+
+  {{outlet}}
 </div>
