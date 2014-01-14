@@ -1,0 +1,14 @@
+<h3>Index</h3>
+
+<p>{{link-to 'New taskable' 'taskables.new'}}</p>
+
+<table>
+  <tr>
+    <th>id</th>
+  </tr>
+  {{#each}}
+    <tr>
+      <td>{{link-to id 'taskables.show' this}}</td>
+    </tr>
+  {{/each}}
+</table>

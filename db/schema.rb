@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114034144) do
+ActiveRecord::Schema.define(version: 20140114045318) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -30,8 +30,15 @@ ActiveRecord::Schema.define(version: 20140114034144) do
     t.datetime "updated_at"
   end
 
+  create_table "taskables", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasks", force: true do |t|
     t.string   "subject"
+    t.integer  "taskable_id"
+    t.string   "taskable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

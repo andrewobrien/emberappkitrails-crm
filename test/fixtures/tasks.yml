@@ -2,10 +2,12 @@
 #
 # Table name: tasks
 #
-#  id         :integer          not null, primary key
-#  subject    :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id            :integer          not null, primary key
+#  subject       :string(255)
+#  taskable_id   :integer
+#  taskable_type :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
