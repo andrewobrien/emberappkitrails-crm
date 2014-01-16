@@ -1,7 +1,52 @@
-<h3>{{id}}</h3>
+<section class="secondary">
+  <div class="row">
+    <div class="col-md-12">
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">{{name}}</p>
+          </div>
+        </div>
 
-<p>{{link-to 'Edit' 'companies.edit' this}} <button {{action destroyRecord}}>Destroy</button></p>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">People</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">
+              <ul>
+                {{#each person in people}}
+                  {{#if person.fullName}}
+                    {{link-to 'person' "{{person.FullName}}" person}}
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </p>
+          </div>
+        </div>
 
-<ul>
-  <li>Name: {{name}}</li>
-</ul>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Tasks</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">
+              <ul>
+                {{#each task in tasks}}
+                  {{#if task.subject}}
+                    <li><a {{action editTask 'taskModal' task}} {{bind-attr class="task.isDirty:dirty:notDirty"}}>{{task.subject}}</a></li>
+                  {{/if}}
+                {{/each}}
+              </ul>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      {{link-to 'Edit' 'companies.edit' this class="btn btn-default"}}
+    </div>
+    <div class="col-md-6 right">
+      <button class="btn btn-primary" type="submit" {{action 'newTask' 'taskModal'}}>Add Task</button>
+    </div>
+  </div>
+</section>

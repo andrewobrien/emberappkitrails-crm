@@ -1,7 +1,6 @@
-<div>
-  <label for="">Name</label>
-  {{input value=name}}
-</div>
-
-<button type="submit" {{action save}}>Save</button>
-<button type="submit" {{action cancel}}>Cancel</button>
+<form role="form">
+  <div class="form-group">
+    <label for="name">Name</label>
+    {{input value=name class="form-control" id="name" placeholder="Company Name"}}
+  </div>
+</form>
