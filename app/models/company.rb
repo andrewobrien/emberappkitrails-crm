@@ -10,4 +10,5 @@
 
 class Company < ActiveRecord::Base
   has_many :people
+  has_many :tasks, as: :taskable
 end

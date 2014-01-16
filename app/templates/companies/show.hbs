@@ -16,7 +16,7 @@
               <ul>
                 {{#each person in people}}
                   {{#if person.fullName}}
-                    {{link-to 'person' "{{person.FullName}}" person}}
+                    <li>{{#link-to 'people.show' person}}{{person.fullName}}{{/link-to}}</li>
                   {{/if}}
                 {{/each}}
               </ul>
