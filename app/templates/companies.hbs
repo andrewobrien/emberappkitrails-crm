@@ -1,3 +1,14 @@
 <h2>Companies</h2>
-
-{{outlet}}
+<div class="row">
+  <div class="col-md-3">
+    <div id="company-list" class="list-group">
+      {{link-to '+ New company' 'companies.new' class="list-group-item bold"}}
+        {{#each}}
+          {{link-to name 'companies.show' this class="list-group-item"}}
+        {{/each}}
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>

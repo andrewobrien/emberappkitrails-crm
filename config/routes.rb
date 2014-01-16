@@ -3,6 +3,9 @@ EmberappkitrailsCrm::Application.routes.draw do
     namespace :v1 do
       resources :tasks, except: [:new, :edit]
       resources :tasks, except: [:new, :edit]
+      resources :tasks, except: [:new, :edit]
+      resources :tasks, except: [:new, :edit]
+      resources :tasks, except: [:new, :edit]
       resources :taskables, except: [:new, :edit]
       resources :companies, except: [:new, :edit]
       resources :tasks, except: [:new, :edit]

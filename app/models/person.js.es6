@@ -1,4 +1,5 @@
 import Taskable from "app/models/taskable";
+
 export default Taskable.extend({
   firstname: DS.attr('string'),
   lastname: DS.attr('string'),

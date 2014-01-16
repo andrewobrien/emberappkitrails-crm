@@ -1,4 +1,5 @@
 export default Ember.Route.extend({
+
   model: function(params) {
     return this.store.find('company', params.company_id);
   },
@@ -6,6 +7,7 @@ export default Ember.Route.extend({
     var model = this.get('controller.model');
     model.rollback();
   },
+
   actions: {
     save: function() {
       var model = this.get('controller.model');

@@ -10,6 +10,7 @@ export default Ember.Route.extend({
   },
   actions: {
     save: function() {
+      debugger;
       var model = this.get('controller.model');
       var _this = this;
       model.save().then(function() {

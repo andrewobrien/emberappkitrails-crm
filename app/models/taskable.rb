@@ -8,5 +8,7 @@
 #
 
 class Taskable < ActiveRecord::Base
-  has_many :tasks
+  has_many :tasks, as: :taskable
+  belongs_to :company
+  belongs_to :person
 end

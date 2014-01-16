@@ -1,3 +1,14 @@
 <h2>People</h2>
-
-{{outlet}}
+<div class="row">
+  <div class="col-md-3">
+    <div id="people-list" class="list-group">
+      {{link-to '+ New Person' 'people.new' class="list-group-item bold"}}
+        {{#each}}
+          {{link-to firstname 'people.show' this class="list-group-item"}}
+        {{/each}}
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
