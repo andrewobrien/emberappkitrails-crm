@@ -3,4 +3,5 @@ class PersonSerializer < ActiveModel::Serializer
 
   embed :ids, include: true
   has_one :company
+  has_many :tasks
 end
