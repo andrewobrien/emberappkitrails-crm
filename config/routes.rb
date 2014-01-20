@@ -69,4 +69,7 @@ EmberappkitrailsCrm::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Uncomment when using 'history' as the location in Ember's router
+  # get '*foo', :to => 'landing#index'
 end
